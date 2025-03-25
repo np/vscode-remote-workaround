@@ -24,7 +24,7 @@ in {
       };
 
       services.vscode-remote-workaround.script = ''
-        for i in ~/.vscode-server/bin/*; do
+        for i in ~/.vscode-server/bin/*/; do
           echo "Fixing vscode-server in $i..."
           ln -sf ${cfg.package}/bin/node $i/node
         done
